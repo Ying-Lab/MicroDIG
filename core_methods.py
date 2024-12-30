@@ -1,9 +1,3 @@
-'''
-Created on Jun 24, 2012
-
-@author: jonathanfriedman 
-'''
-
 from pandas import DataFrame as DF
 import numpy as np
 from functools import reduce
