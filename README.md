@@ -10,14 +10,27 @@ pip install -r requirements.txt
 
 ## 运行MicroDIG框架
 ``` 
-python ViTax.py [--contigs INPUT_FA] [--out OUTPUT_TXT] 
---contigs INPUT_FA   input fasta file
---out OUTPUT_TXT     The output csv file (prediction_output.txt default) 
---confidence         The confidence threshold of the prediction (0.6 default)  
---rc                 include reverse complement prediction (default True)
---window_size        The sliding window size (default 400)
+microDIG = MicroDIG(input_data,input_t_index,isNormal,result_save_name)
+microDIG.Generate_Enhanced_data()
+microDIG.Get_trainAndval_set()
+microDIG.train_model()
+microDIG.Get_Two_Distributions()
+microDIG.run_validity_check()
+
+--input_data        时序数据输入
+--input_t_index     时间点信息输入
+--isNormal          是否归一化
+--result_save_name  结果保存路径
 ```
 ## 使用示例
 ```
-python ViTax.py --contigs test.fa --out prediction_output.txt --confidence 0.6 --rc False --window_size 400
+data = pd.read_csv("/test_Data/R_sim_data.csv",index_col=0)
+t_index = np.array(data.iloc[-1,:])
+data = np.array(data.iloc[:-1,:])
+microDIG = MicroDIG(data,t_index,False,"test_result_save_dir")
+microDIG.Generate_Enhanced_data()
+microDIG.Get_trainAndval_set()
+microDIG.train_model()
+microDIG.Get_Two_Distributions()
+microDIG.run_validity_check()
 ```
