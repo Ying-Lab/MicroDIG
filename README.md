@@ -24,7 +24,7 @@ microDIG.run_validity_check()
 ```
 ## 使用示例
 ```
-data = pd.read_csv("/test_Data/R_sim_data.csv",index_col=0)
+data = pd.read_csv("test_Data/R_sim_data.csv",index_col=0)
 t_index = np.array(data.iloc[-1,:])
 data = np.array(data.iloc[:-1,:])
 microDIG = MicroDIG(data,t_index,False,"test_result_save_dir")
