@@ -1,9 +1,3 @@
-'''
-Created on Jun 24, 2012
-
-@author: jonathanfriedman 
-'''
-
 from pandas import DataFrame as DF
 from core_methods import _get_axis
 import numpy as np
