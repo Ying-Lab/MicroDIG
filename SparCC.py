@@ -1,11 +1,3 @@
-#!/usr/bin/env python
-
-'''
-@author: jonathanfriedman
-
-Module for estimating the correlations in the basis when only compositional data is available.
-'''
-
 import warnings
 import numpy as np
 from numpy import (unravel_index, argmax, ones, corrcoef, cov, r_, 
