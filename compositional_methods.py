@@ -1,9 +1,3 @@
-'''
-Created on Jun 24, 2012
-
-@author: jonathanfriedman 
-'''
-
 import numpy as np
 from pandas import DataFrame as DF
 from numpy import array, asarray, zeros, log, var, matrix, tile
