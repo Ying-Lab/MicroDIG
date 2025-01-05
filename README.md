@@ -14,8 +14,8 @@ microDIG = MicroDIG(input_data,input_t_index,isNormal,result_save_name)
 microDIG.Generate_Enhanced_data()
 microDIG.Get_trainAndval_set()
 microDIG.train_model()
-microDIG.Get_Two_Distributions()
-microDIG.run_validity_check()
+microDIG.get_Wij_without_check()
+
 
 --input_data        时序数据输入
 --input_t_index     时间点信息输入
@@ -31,6 +31,5 @@ microDIG = MicroDIG(data,t_index,False,"test_result_save_dir")
 microDIG.Generate_Enhanced_data()
 microDIG.Get_trainAndval_set()
 microDIG.train_model()
-microDIG.Get_Two_Distributions()
-microDIG.run_validity_check()
+microDIG.get_Wij_without_check()
 ```
